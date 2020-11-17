@@ -7,6 +7,9 @@
   "bin": {
     "gendiff": "bin/gendiff.js"
   },
+  "engines": {
+    "node": ">=14"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,13 +17,14 @@
     "type": "git",
     "url": "git+https://github.com/Surtt/Cli-Difference-Calculator.git"
   },
-  "author": "",
+  "author": "Alexander Sergeev",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Surtt/Cli-Difference-Calculator/issues"
   },
   "homepage": "https://github.com/Surtt/Cli-Difference-Calculator#readme",
   "dependencies": {
-    "commander": "^6.2.0"
+    "commander": "^6.2.0",
+    "lodash": "^4.17.20"
   }
 }
