@@ -1,14 +1,9 @@
-import path from 'path';
-import fs from 'fs';
-import process from 'process';
+import { readFileSync } from 'fs';
 import _ from 'lodash';
-
-// const fs = require('fs');
-// const process = require('process');
-// const path = require('path');
+import { resolve } from 'path';
 
 const getData = (filename) => {
-  const data = fs.readFileSync(filename, 'utf-8');
+  const data = readFileSync(resolve(filename));
   return data;
 };
 
@@ -16,7 +11,7 @@ const gendiff = (filepath1, filepath2) => {
   const data1 = JSON.parse(getData(filepath1));
   const data2 = JSON.parse(getData(filepath2));
 
-  const keys = _.union(Object.keys(data1), Object.keys(data2));
+  const keys = _.union(Object.keys(data1), Object.keys(data2)).sort();
 
   const result = keys.reduce((acc, key) => {
     if (_.has(data1, key) && _.has(data2, key)) {
@@ -32,7 +27,8 @@ const gendiff = (filepath1, filepath2) => {
 
     return [...acc, `+ ${key}: ${data2[key]}`];
   }, []);
-  return result.join('\n');
+  const output = result.join('\n');
+  return `{\n${output}\n}`;
 };
 
 export default gendiff;
