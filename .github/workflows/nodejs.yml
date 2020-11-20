@@ -29,10 +29,10 @@ jobs:
         # The Node.js version to configure
         with:
           node-version: ${{ matrix.node-version }}
-      # - name: npm install, build
+      - name: npm install, build
         # Install and build project
-        # run: |
-        #   make install
+        run: |
+          make install
         # Add environment variables
         env:
           CI: true
@@ -46,7 +46,7 @@ jobs:
         uses: paambaati/codeclimate-action@v2.7.4
         # Add Code Climate secret key
         env:
-          CC_TEST_REPORTER_ID: c7b0f241d6ba250408c514cf76a8261a6f484f395a10b86c8e7826d25399094b
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
           coverageCommand: make test-coverage
           debug: true
