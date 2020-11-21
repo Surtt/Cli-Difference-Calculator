@@ -1,15 +1,20 @@
 import { readFileSync } from 'fs';
 import _ from 'lodash';
-import { resolve } from 'path';
-
-const getData = (filename) => {
-  const data = readFileSync(resolve(filename));
-  return data;
-};
+import { resolve, extname } from 'path';
+import parser from './parsers.js';
 
 const gendiff = (filepath1, filepath2) => {
-  const data1 = JSON.parse(getData(filepath1));
-  const data2 = JSON.parse(getData(filepath2));
+  const fullpath1 = resolve(filepath1);
+  const fullpath2 = resolve(filepath2);
+
+  const readData1 = readFileSync(fullpath1);
+  const readData2 = readFileSync(fullpath2);
+
+  const extnameData1 = extname(fullpath1).slice(1);
+  const extnameData2 = extname(fullpath2).slice(1);
+
+  const data1 = parser(readData1, extnameData1);
+  const data2 = parser(readData2, extnameData2);
 
   const keys = _.union(Object.keys(data1), Object.keys(data2)).sort();
 
