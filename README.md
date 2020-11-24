@@ -6,7 +6,6 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/b919c04905f23306fef5/maintainability)](https://codeclimate.com/github/Surtt/Cli-Difference-Calculator/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/b919c04905f23306fef5/test_coverage)](https://codeclimate.com/github/Surtt/Cli-Difference-Calculator/test_coverage)
 
----
 ## Description
 Gendiff is a command-line difference calculator.  
 Comparing two configuration files and showing a difference.
@@ -52,3 +51,6 @@ host: hexlet.io
 
 Comparing YAML's files
 [![asciicast](https://asciinema.org/a/O9nbgNEgCBWNGnISQjs7TSWsT.svg)](https://asciinema.org/a/O9nbgNEgCBWNGnISQjs7TSWsT)
+
+Output to stylish
+[![asciicast](https://asciinema.org/a/tdojUjUBHNTU74YCRBLtdzCb3.svg)](https://asciinema.org/a/tdojUjUBHNTU74YCRBLtdzCb3)
