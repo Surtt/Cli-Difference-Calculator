@@ -18,7 +18,7 @@ const generateDiff = (data1, data2) => {
         key, type: 'changed', value1: file1[key], value2: file2[key],
       };
     }
-    return { key, type: 'notModified', value: file1[key] };
+    return { key, type: 'unchanged', value: file1[key] };
   };
 
   const keys = union(Object.keys(data1), Object.keys(data2)).sort();

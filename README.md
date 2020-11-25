@@ -54,3 +54,6 @@ Comparing YAML's files
 
 Output to stylish
 [![asciicast](https://asciinema.org/a/tdojUjUBHNTU74YCRBLtdzCb3.svg)](https://asciinema.org/a/tdojUjUBHNTU74YCRBLtdzCb3)
+
+Ouput to plain
+[![asciicast](https://asciinema.org/a/RjTaOcLAGnwfxz7FxFVi0ERSn.svg)](https://asciinema.org/a/RjTaOcLAGnwfxz7FxFVi0ERSn)

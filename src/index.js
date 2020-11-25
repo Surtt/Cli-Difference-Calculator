@@ -2,9 +2,9 @@ import { readFileSync } from 'fs';
 import { resolve, extname } from 'path';
 import parser from './parsers.js';
 import generateDiff from './gendiff.js';
-import stylish from './stylish.js';
+import formatter from './formatters/index.js';
 
-const gendiff = (filepath1, filepath2) => {
+const gendiff = (filepath1, filepath2, format) => {
   const fullpath1 = resolve(filepath1);
   const fullpath2 = resolve(filepath2);
 
@@ -18,7 +18,7 @@ const gendiff = (filepath1, filepath2) => {
   const data2 = parser(readData2, extnameData2);
 
   const difference = generateDiff(data1, data2);
-  return stylish(difference);
+  return formatter(difference, format);
 };
 
 export default gendiff;

@@ -18,7 +18,7 @@ const types = {
   removed: ({ key, value }, depth) => `${setArea(depth)}- ${key}: ${stringify(value, depth)}`,
   nested: ({ key, children }, depth, render) => `${setArea(depth)}  ${key}: {\n${render(children, depth + 2)}\n${setArea(depth + 1)}}`,
   changed: ({ key, value1, value2 }, depth) => `${setArea(depth)}- ${key}: ${stringify(value1, depth)}\n${setArea(depth)}+ ${key}: ${stringify(value2, depth)}`,
-  notModified: ({ key, value }, depth) => `${setArea(depth)}  ${key}: ${stringify(value, depth)}`,
+  unchanged: ({ key, value }, depth) => `${setArea(depth)}  ${key}: ${stringify(value, depth)}`,
 };
 
 const rendering = (tree, depth = 1) => tree.map((node) => types[node.type](node, depth, rendering)).join('\n');
