@@ -10,6 +10,7 @@ const __dirname = dirname(__filename);
 const format = {
   stylish: 'stylish.txt',
   plain: 'plain.txt',
+  json: 'json.txt',
 };
 
 let getFixturePath;
@@ -23,6 +24,7 @@ beforeEach(() => {
 test.each([
   ['json', 'stylish'], ['yml', 'stylish'],
   ['json', 'plain'], ['yml', 'plain'],
+  ['json', 'json'], ['yml', 'json'],
 ])('%s format %s', (extname, formatter) => {
   const getFormat = format[formatter];
   const result = readFile(`${getFormat}`);

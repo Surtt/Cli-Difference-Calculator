@@ -57,3 +57,6 @@ Output to stylish
 
 Ouput to plain
 [![asciicast](https://asciinema.org/a/RjTaOcLAGnwfxz7FxFVi0ERSn.svg)](https://asciinema.org/a/RjTaOcLAGnwfxz7FxFVi0ERSn)
+
+Output to json
+[![asciicast](https://asciinema.org/a/brA595NV6KUAjbP7tEiohecx9.svg)](https://asciinema.org/a/brA595NV6KUAjbP7tEiohecx9)
