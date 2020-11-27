@@ -5,7 +5,6 @@ import generateDiff from './gendiff.js';
 import selectFormatter from './formatters/index.js';
 
 const gendiff = (filepath1, filepath2, format) => {
-  console.log(format);
   const fullpath1 = resolve(filepath1);
   const fullpath2 = resolve(filepath2);
 
@@ -21,5 +20,5 @@ const gendiff = (filepath1, filepath2, format) => {
   const difference = generateDiff(data1, data2);
   return selectFormatter(difference, format);
 };
-// console.log(gendiff('__fixtures__/file1.json', '__fixtures__/file2.json', 'json'));
+
 export default gendiff;
