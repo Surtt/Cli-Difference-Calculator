@@ -1,10 +1,15 @@
-import getStylish from './stylish.js';
-import getPlain from './plain.js';
+import stylish from './stylish.js';
+import plain from './plain.js';
 
-const formatter = {
-  stylish: getStylish,
-  plain: getPlain,
-  json: JSON.stringify,
+export default (elements, format = 'stylish') => {
+  switch (format) {
+    case 'plain':
+      return plain(elements);
+    case 'json':
+      return JSON.stringify(elements);
+    case 'stylish':
+      return stylish(elements);
+    default:
+      throw new Error('error');
+  }
 };
-
-export default (content, format) => formatter[format](content);
