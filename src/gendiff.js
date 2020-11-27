@@ -1,6 +1,8 @@
 import lodash from 'lodash';
 
-const { union, isObject, has } = lodash;
+const {
+  union, isObject, has, sortBy,
+} = lodash;
 
 const generateDiff = (data1, data2) => {
   const getDifference = (file1, file2, key) => {
@@ -21,7 +23,7 @@ const generateDiff = (data1, data2) => {
     return { key, type: 'unchanged', value: file1[key] };
   };
 
-  const keys = union(Object.keys(data1), Object.keys(data2)).sort();
+  const keys = sortBy(union(Object.keys(data1), Object.keys(data2)));
   return keys.map((key) => getDifference(data1, data2, key));
 };
 
