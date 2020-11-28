@@ -10,6 +10,6 @@ export default (elements, format = 'stylish') => {
     case 'stylish':
       return stylish(elements);
     default:
-      throw new Error('error');
+      throw new Error(`Unknown format '${format}'.`);
   }
 };

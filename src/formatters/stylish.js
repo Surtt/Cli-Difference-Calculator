@@ -1,11 +1,9 @@
-import lodash from 'lodash';
-
-const { isObject } = lodash;
+import _ from 'lodash';
 
 const setArea = (indent) => '  '.repeat(indent);
 
 const stringify = (data, depth) => {
-  if (!isObject(data)) {
+  if (!_.isObject(data)) {
     return data;
   }
 

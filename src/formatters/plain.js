@@ -1,14 +1,11 @@
-import lodash from 'lodash';
-
-const { isObject } = lodash;
-const { isString } = lodash;
+import _ from 'lodash';
 
 const formatValue = (value) => {
-  if (isObject(value)) {
+  if (_.isObject(value)) {
     return '[complex value]';
   }
 
-  return isString(value) ? `'${value}'` : value;
+  return _.isString(value) ? `'${value}'` : value;
 };
 
 const types = {
@@ -20,6 +17,6 @@ const types = {
 };
 
 const rendering = (tree, acc = '') => tree.map((node) => types[node.type](node, acc, rendering)).filter((node) => node !== null).join('\n');
-const makeTree = (tree) => `${rendering(tree)}`;
+const makeTree = (tree) => rendering(tree);
 
 export default makeTree;

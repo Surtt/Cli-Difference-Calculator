@@ -5,4 +5,4 @@ const parsers = {
   yml: yaml.safeLoad,
 };
 
-export default (content, extname) => parsers[extname](content);
+export default (content, format) => parsers[format](content);
