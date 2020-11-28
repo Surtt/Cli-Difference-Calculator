@@ -1,7 +1,4 @@
-/* eslint prefer-const: ["error", {"ignoreReadBeforeAssign": true}] */
-/* eslint-env es6 */
-
-import { test, expect, beforeAll } from '@jest/globals';
+import { test, expect } from '@jest/globals';
 import { readFileSync } from 'fs';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
@@ -18,17 +15,12 @@ const format = {
 
 const getFixturePath = (filename) => join(__dirname, '..', '__fixtures__', filename);
 
-let readFile;
-
-beforeAll(() => {
-  readFile = (filename) => readFileSync(getFixturePath(filename), 'utf-8');
-});
-
 test.each([
   ['json', 'stylish'], ['yml', 'stylish'],
   ['json', 'plain'], ['yml', 'plain'],
   ['json', 'json'], ['yml', 'json'],
 ])('%s format %s', (extname, formatter) => {
+  const readFile = (filename) => readFileSync(getFixturePath(filename), 'utf-8');
   const getFormat = format[formatter];
   const result = readFile(`${getFormat}`);
   const filepath1 = getFixturePath(`file1.${extname}`);
