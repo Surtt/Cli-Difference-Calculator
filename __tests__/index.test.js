@@ -15,11 +15,13 @@ const format = {
 
 const getFixturePath = (filename) => join(__dirname, '..', '__fixtures__', filename);
 
-let readFile; // eslint-disable-line
+/* eslint-disable */
+let readFile;
 
 beforeAll(() => {
   readFile = (filename) => readFileSync(getFixturePath(filename), 'utf-8');
 });
+/* eslint-disable */
 
 test.each([
   ['json', 'stylish'], ['yml', 'stylish'],
