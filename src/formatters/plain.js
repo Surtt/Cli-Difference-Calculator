@@ -16,7 +16,12 @@ const types = {
   unchanged: () => null,
 };
 
-const rendering = (tree, acc = '') => tree.map((node) => types[node.type](node, acc, rendering)).filter((node) => node !== null).join('\n');
+const rendering = (tree) => {
+  const iter = (nodes, acc) => nodes
+    .map((node) => types[node.type](node, acc, iter))
+    .filter((node) => node !== null).join('\n');
+  return iter(tree, '');
+};
 const makeTree = (tree) => rendering(tree);
 
 export default makeTree;

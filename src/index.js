@@ -11,11 +11,11 @@ const gendiff = (filepath1, filepath2, format) => {
   const fileContent1 = readFileSync(fullpath1);
   const fileContent2 = readFileSync(fullpath2);
 
-  const extnameData1 = extname(fullpath1).slice(1);
-  const extnameData2 = extname(fullpath2).slice(1);
+  const formatData1 = extname(fullpath1).slice(1);
+  const formatData2 = extname(fullpath2).slice(1);
 
-  const data1 = parser(fileContent1, extnameData1);
-  const data2 = parser(fileContent2, extnameData2);
+  const data1 = parser(fileContent1, formatData1);
+  const data2 = parser(fileContent2, formatData2);
 
   const difference = generateDiff(data1, data2);
   return formatter(difference, format);

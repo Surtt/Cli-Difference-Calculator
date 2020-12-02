@@ -19,7 +19,13 @@ const types = {
   unchanged: ({ key, value }, depth) => `${setArea(depth)}  ${key}: ${stringify(value, depth)}`,
 };
 
-const rendering = (tree, depth = 1) => tree.map((node) => types[node.type](node, depth, rendering)).join('\n');
+const rendering = (tree) => {
+  const iter = (nodes, depth) => (
+    nodes.map(({ type, ...node }) => types[type](node, depth, iter)).join('\n')
+  );
+  return iter(tree, 1);
+};
+
 const makeTree = (tree) => `{\n${rendering(tree)}\n}`;
 
 export default makeTree;
