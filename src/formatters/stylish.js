@@ -21,7 +21,7 @@ const types = {
 
 const rendering = (tree) => {
   const iter = (nodes, depth) => (
-    nodes.map(({ type, ...node }) => types[type](node, depth, iter)).join('\n')
+    nodes.map((node) => types[node.type](node, depth, iter)).join('\n')
   );
   return iter(tree, 1);
 };
