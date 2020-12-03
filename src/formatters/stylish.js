@@ -26,6 +26,4 @@ const rendering = (tree) => {
   return iter(tree, 1);
 };
 
-const makeTree = (tree) => `{\n${rendering(tree)}\n}`;
-
-export default makeTree;
+export default (tree) => `{\n${rendering(tree)}\n}`;

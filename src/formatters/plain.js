@@ -22,6 +22,5 @@ const rendering = (tree) => {
     .filter((node) => node !== null).join('\n');
   return iter(tree, '');
 };
-const makeTree = (tree) => rendering(tree);
 
-export default makeTree;
+export default (tree) => rendering(tree);
