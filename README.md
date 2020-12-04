@@ -1,8 +1,8 @@
 # Cli Difference Calculator
 
 <!-- ### Hexlet tests and linter status: -->
-[![Actions Status](https://github.com/Surtt/Cli-Difference-Calculator/workflows/hexlet-check/badge.svg)](https://github.com/Surtt/Cli-Difference-Calculator/actions?query=workflow%3Ahexlet-check)
-[![GitHub Actions](https://github.com/Surtt/Cli-Difference-Calculator/workflows/Node%20CI/badge.svg)](https://github.com/Surtt/Cli-Difference-Calculator/actions?query=workflow%3A%22Node+CI%22)
+[![Actions Status](https://github.com/Surtt/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/Surtt/frontend-project-lvl2/actions?query=workflow%3Ahexlet-check)
+[![GitHub Actions](https://github.com/Surtt/Cli-Difference-Calculator/workflows/Node%20CI/badge.svg)](https://github.com/Surtt/frontend-project-lvl2/actions?query=workflow%3A%22Node+CI%22)
 [![Maintainability](https://api.codeclimate.com/v1/badges/b919c04905f23306fef5/maintainability)](https://codeclimate.com/github/Surtt/Cli-Difference-Calculator/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/b919c04905f23306fef5/test_coverage)](https://codeclimate.com/github/Surtt/Cli-Difference-Calculator/test_coverage)
 
