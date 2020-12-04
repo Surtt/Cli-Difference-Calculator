@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "![Actions Status](https://github.com/Surtt/frontend-project-lvl2/workflows/hexlet-check/badge.svg)",
+  "description": "Cli-Difference-Calculator",
   "main": "src/index.js",
   "type": "module",
   "bin": {

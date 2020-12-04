@@ -1,8 +1,8 @@
 # Cli Difference Calculator
 
 <!-- ### Hexlet tests and linter status: -->
-![Actions Status](https://github.com/Surtt/frontend-project-lvl2/workflows/hexlet-check/badge.svg)
-![GitHub Actions](https://github.com/Surtt/Cli-Difference-Calculator/workflows/Node%20CI/badge.svg)
+[![Actions Status](https://github.com/Surtt/Cli-Difference-Calculator/workflows/hexlet-check/badge.svg)](https://github.com/Surtt/Cli-Difference-Calculator/actions?query=workflow%3Ahexlet-check)
+[![GitHub Actions](https://github.com/Surtt/Cli-Difference-Calculator/workflows/Node%20CI/badge.svg)](https://github.com/Surtt/Cli-Difference-Calculator/actions?query=workflow%3A%22Node+CI%22)
 [![Maintainability](https://api.codeclimate.com/v1/badges/b919c04905f23306fef5/maintainability)](https://codeclimate.com/github/Surtt/Cli-Difference-Calculator/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/b919c04905f23306fef5/test_coverage)](https://codeclimate.com/github/Surtt/Cli-Difference-Calculator/test_coverage)
 
@@ -11,7 +11,10 @@ Gendiff is a command-line difference calculator.
 Comparing two configuration files and showing a difference.
 
 ## Installing
-```npm install -g Cli-Difference-Calculator```
+1. Clone this repository to your filesystem:
+```git https://github.com/Surtt/frontend-project-lvl2.git```
+2. Go to directory frontend-project-lvl2 and create links:
+```npm link```
 
 ## Usage
 ```gendiff [options] <pathToFile1> <pathToFile2>```
