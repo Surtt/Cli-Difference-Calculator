@@ -16,6 +16,7 @@ Comparing two configuration files and showing a difference.
 ```git clone https://github.com/Surtt/frontend-project-lvl2.git```
 
 2. Go to directory frontend-project-lvl2 and create links:
+
 ```npm link```
 
 ## Usage
