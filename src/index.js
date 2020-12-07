@@ -4,7 +4,7 @@ import parser from './parsers.js';
 import generateDiff from './gendiff.js';
 import formatter from './formatters/index.js';
 
-const gendiff = (filepath1, filepath2, format) => {
+const gendiff = (filepath1, filepath2, format = 'stylish') => {
   const fullpath1 = resolve(filepath1);
   const fullpath2 = resolve(filepath2);
 

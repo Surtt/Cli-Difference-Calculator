@@ -12,7 +12,9 @@ Comparing two configuration files and showing a difference.
 
 ## Installing
 1. Clone this repository to your filesystem:
-```git https://github.com/Surtt/frontend-project-lvl2.git```
+
+```git clone https://github.com/Surtt/frontend-project-lvl2.git```
+
 2. Go to directory frontend-project-lvl2 and create links:
 ```npm link```
 
