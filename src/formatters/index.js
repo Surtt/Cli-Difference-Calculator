@@ -1,7 +1,7 @@
 import stylish from './stylish.js';
 import plain from './plain.js';
 
-export default (elements, format = 'stylish') => {
+export default (elements, format) => {
   switch (format) {
     case 'plain':
       return plain(elements);
